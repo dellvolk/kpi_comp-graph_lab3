@@ -72,8 +72,8 @@ export default function (): ICore {
 
         if (!figure_points || figure_points?.length === 0) return void 0;
 
-        console.log('figure', stage.figure_points)
-        console.log(JSON.stringify(stage.figure_points))
+        // console.log('figure', stage.figure_points)
+        // console.log(JSON.stringify(stage.figure_points))
 
         figure_points?.forEach(({ax, ay, bx, by, cx, cy, wa, wc, f, u:[from, to]}) => {
             const a = point(ax,ay)
@@ -88,6 +88,8 @@ export default function (): ICore {
                 ctx.strokeStyle = 'red'
                 Circle(cx, cy, .1)
                 ctx.strokeStyle = 'black'
+                LinePoint(a,b,1)
+                LinePoint(b,c,1)
             }
 
             let wb = f / (1 - f)

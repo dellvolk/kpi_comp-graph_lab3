@@ -1,8 +1,8 @@
 import {stage} from './stage'
 import {IPoint} from "./types";
 
-export const LinePoint = (a: IPoint, b: IPoint): void => {
-    Line(a.x, a.y, b.x, b.y)
+export const LinePoint = (a: IPoint, b: IPoint, lineWidth:number = 2): void => {
+    Line(a.x, a.y, b.x, b.y, lineWidth)
 }
 
 /* @param c - center point
@@ -42,11 +42,11 @@ export const LineDeg = (c: IPoint, p: IPoint, l: number, _deg:number = 0): [IPoi
 //     return
 // }
 
-export default function Line(x1: number, y1: number, x2: number, y2: number): void {
+export default function Line(x1: number, y1: number, x2: number, y2: number, lineWidth:number = 2): void {
     const {ctx, pos, px_per_sm,} = stage;
 
     ctx.beginPath()
-    ctx.lineWidth = 2;
+    ctx.lineWidth = lineWidth;
 
     x1 *= px_per_sm
     y1 *= px_per_sm

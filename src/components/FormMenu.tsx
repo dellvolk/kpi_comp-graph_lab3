@@ -97,22 +97,22 @@ const FormMenu = ({onChange}: IFormMenuProps) => {
                 {label: 'Oy', value: stage.affine.oy, key: 'affine.oy'},
             ]
         },
-        {
-            active: false,
-            title: 'Projective',
-            className: 'projective-menu',
-            options: [
-                {label: 'Xx', value: stage.projective.xx, key: 'projective.xx', col: 4},
-                {label: 'Xy', value: stage.projective.xy, key: 'projective.xy', col: 4},
-                {label: 'wX', value: stage.projective.wx, key: 'projective.wx', col: 4},
-                {label: 'Yx', value: stage.projective.yx, key: 'projective.yx', col: 4},
-                {label: 'Yy', value: stage.projective.yy, key: 'projective.yy', col: 4},
-                {label: 'wY', value: stage.projective.wy, key: 'projective.wy', col: 4},
-                {label: 'Ox', value: stage.projective.ox, key: 'projective.ox', col: 4},
-                {label: 'Oy', value: stage.projective.oy, key: 'projective.oy', col: 4},
-                {label: 'wO', value: stage.projective.wo, key: 'projective.wo', col: 4},
-            ]
-        }
+        // {
+        //     active: false,
+        //     title: 'Projective',
+        //     className: 'projective-menu',
+        //     options: [
+        //         {label: 'Xx', value: stage.projective.xx, key: 'projective.xx', col: 4},
+        //         {label: 'Xy', value: stage.projective.xy, key: 'projective.xy', col: 4},
+        //         {label: 'wX', value: stage.projective.wx, key: 'projective.wx', col: 4},
+        //         {label: 'Yx', value: stage.projective.yx, key: 'projective.yx', col: 4},
+        //         {label: 'Yy', value: stage.projective.yy, key: 'projective.yy', col: 4},
+        //         {label: 'wY', value: stage.projective.wy, key: 'projective.wy', col: 4},
+        //         {label: 'Ox', value: stage.projective.ox, key: 'projective.ox', col: 4},
+        //         {label: 'Oy', value: stage.projective.oy, key: 'projective.oy', col: 4},
+        //         {label: 'wO', value: stage.projective.wo, key: 'projective.wo', col: 4},
+        //     ]
+        // }
     ]
 
     React.useEffect(() => {
