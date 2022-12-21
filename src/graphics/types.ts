@@ -1,0 +1,55 @@
+type IMatrixRow = [number, number, number]
+export type ITransformMatrix = [IMatrixRow, IMatrixRow, IMatrixRow]
+
+export type TFUpdateHistory = (history: IPoint[]) => void
+
+export interface ICore {
+    draw(): void;
+
+    set(key: string, value: number): void;
+}
+
+export interface IFigurePoint {
+    ax: number
+    ay: number
+    bx: number
+    by: number
+    cx: number
+    cy: number
+    wa: number
+    wc: number
+    f: number
+    u: [number, number]
+}
+
+export interface IPoint {
+    x: number
+    y: number
+}
+
+export interface IRotation {
+    x: number
+    y: number
+    angle: number
+}
+
+export interface IAffine {
+    xx: number
+    xy: number
+    yy: number
+    yx: number
+    ox: number
+    oy: number
+}
+
+export interface IProjective {
+    xx: number,
+    xy: number,
+    yy: number,
+    yx: number,
+    ox: number,
+    oy: number,
+    wx: number,
+    wy: number,
+    wo: number
+}
